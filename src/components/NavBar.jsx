@@ -13,19 +13,19 @@ export const NavBar = () => {
           <div className="NavBar__items">
             <div className="NavBar__item NavBar__item-1">
               <span>00</span>
-              <span>home</span>
+              <span> home</span>
             </div>
             <div className="NavBar__item NavBar__item-2">
               <span>01</span>
-              <span>destination</span>
+              <span> destination</span>
             </div>
             <div className="NavBar__item NavBar__item-3">
               <span>02</span>
-              <span>crew</span>
+              <span> crew</span>
             </div>
             <div className="NavBar__item NavBar__item-4">
               <span>03</span>
-              <span>technology</span>
+              <span> technology</span>
             </div>
           </div>
       </nav>
