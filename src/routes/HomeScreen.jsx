@@ -1,8 +1,7 @@
 import React from "react";
-import getImageUrl from "../helpers/getImages";
 import "../sass/layout/header.scss";
 
-export const Header = () => {
+export const HomeScreen = () => {
   return (
     <header className="header">
       <div className="header__img">
