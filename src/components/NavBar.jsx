@@ -1,6 +1,6 @@
 import React from "react";
 import "../sass/layout/navbar.scss";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const NavBar = () => {
   return (
