@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, Link, BrowserRouter } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { NavBar } from "../components/NavBar";
 import { CrewScreen } from "./CrewScreen";
 import { DestinationScreen } from "./DestinationScreen";

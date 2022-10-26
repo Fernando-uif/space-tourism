@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "../sass/layout/navbar.scss";
 import { NavLink } from "react-router-dom";
 
@@ -12,13 +12,24 @@ export const NavBar = () => {
         </div>
 
         <div className="NavBar__items">
-
-          <NavLink className="NavBar__item NavBar__item-1" to="/">
+          <NavLink
+            className={({ isActive }) =>
+              "NavBar__item NavBar__item-1 " +
+              (isActive ? 'NavBar__selected' : "")
+            }
+            to="/"
+          >
             <span>00</span>
             <span> home</span>
           </NavLink>
 
-          <NavLink className="NavBar__item NavBar__item-2" to="/destination">
+          <NavLink
+            className={({ isActive }) =>
+              "NavBar__item NavBar__item-2 " +
+              (isActive ? " NavBar__selected" : "")
+            }
+            to="/destination"
+          >
             <span>01</span>
             <span> destination</span>
           </NavLink>
@@ -32,7 +43,6 @@ export const NavBar = () => {
             <span>03</span>
             <span> technology</span>
           </NavLink>
-          
         </div>
       </nav>
     </>

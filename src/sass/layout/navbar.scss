@@ -64,7 +64,7 @@
       width: 100%;
       opacity: 0;
       height: 0.2rem;
-      background-color: $white;
+      background-color: $whiteCircle;
       bottom: -4rem;
       left: 0;
       transition: opacity 0.2s ease-in;
@@ -75,6 +75,18 @@
       content: "";
       position: absolute;
       width: 100%;
+      height: 0.2rem;
+      background-color: $whiteCircle;
+      bottom: -4rem;
+      left: 0;
+    }
+  }
+  &__selected{
+    &::after {
+      content: "";
+      position: absolute;
+      width: 100%;
+      opacity: 1;
       height: 0.2rem;
       background-color: $white;
       bottom: -4rem;
