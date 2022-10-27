@@ -1,6 +1,6 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
 import "../../sass/layout/destination.scss";
+import { NavPlanet } from "../../ui/NavPlanet";
 export const DestinationPage = () => {
   return (
     <section className="destination">
@@ -9,10 +9,9 @@ export const DestinationPage = () => {
           <span className="destination__number">01</span> pick your destination
         </div>
         <div className="destination__destinations">
-          <Link to="/destination/moon">Moon</Link>
+          <NavPlanet/>
         </div>
       </div>
-      <Outlet />
     </section>
   );
 };

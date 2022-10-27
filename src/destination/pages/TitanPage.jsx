@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export const TitanPage = () => {
-  return (
-    <div>TitanPage</div>
-  )
-}
+  return <div></div>;
+};
