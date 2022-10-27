@@ -1,4 +1,4 @@
-import '../../sass/pages/destinatin/moon.scss';
+import '../../sass/pages/destination/moon.scss';
 
 export const MoonPage = () => {
   return (

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../../sass/layout/navbar.scss";
 
 import { NavLink } from "react-router-dom";
@@ -35,12 +35,24 @@ export const NavBar = () => {
             <span> destination</span>
           </NavLink>
 
-          <NavLink className="NavBar__item NavBar__item-3" to="/crew">
+          <NavLink
+            className={({ isActive }) =>
+              "NavBar__item NavBar__item-3 " +
+              (isActive ? " NavBar__selected" : "")
+            }
+            to="/crew"
+          >
             <span>02</span>
             <span> crew</span>
           </NavLink>
 
-          <NavLink className="NavBar__item NavBar__item-4" to="/technology">
+          <NavLink
+            className={({ isActive }) =>
+              "NavBar__item NavBar__item-4 " +
+              (isActive ? " NavBar__selected" : "")
+            }
+            to="/technology"
+          >
             <span>03</span>
             <span> technology</span>
           </NavLink>
