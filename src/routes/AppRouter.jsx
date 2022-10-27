@@ -1,12 +1,15 @@
-import React from "react";
-import { Routes, Route } from "react-router-dom";
 import { CrewPage } from "../crew/pages/CrewPage";
-import { DestinationPage } from "../destination/pages/DestinationPage";
-import { MarsPage } from "../destination/pages/MarsPage";
-import { MoonPage } from "../destination/pages/MoonPage";
-import { TechnologyPage } from "../technology/page/TechnologyPage";
-import { NavBar } from "../ui/components/NavBar";
 import { HomeScreen } from "./HomeScreen";
+import { NavBar } from "../ui/components/NavBar";
+import { Routes, Route } from "react-router-dom";
+import { TechnologyPage } from "../technology/page/TechnologyPage";
+import {
+  DestinationPage,
+  EuropaPage,
+  MarsPage,
+  MoonPage,
+  TitanPage,
+} from "../destination/pages/index";
 
 export const AppRouter = () => {
   return (
@@ -17,6 +20,9 @@ export const AppRouter = () => {
         <Route path={"crew"} element={<CrewPage />} />
         <Route path={"destination"} element={<DestinationPage />}>
           <Route path={"moon"} element={<MoonPage />} />
+          <Route path={"mars"} element={<MarsPage />} />
+          <Route path={"titan"} element={<TitanPage />} />
+          <Route path={"europa"} element={<EuropaPage />} />
         </Route>
         <Route path={"technology"} element={<TechnologyPage />} />
       </Routes>
