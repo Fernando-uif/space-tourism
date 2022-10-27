@@ -1,5 +1,5 @@
 import { CrewPage } from "../crew/pages/CrewPage";
-import { HomeScreen } from "./HomeScreen";
+import { HomeScreen } from "../home/pages/HomeScreen";
 import { NavBar } from "../ui/components/NavBar";
 import { Routes, Route } from "react-router-dom";
 import { TechnologyPage } from "../technology/page/TechnologyPage";

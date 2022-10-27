@@ -1,7 +1,6 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
-import '../sass/layout/navPlanet.scss';
-
+import '../../sass/layout/navPlanet.scss';
 export const NavPlanet = () => {
   return (
     <div className="NavPlanet">

@@ -1,4 +1,4 @@
-import React from 'react'
+import '../../sass/pages/moon.scss';
 
 export const MoonPage = () => {
   return (

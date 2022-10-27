@@ -1,6 +1,8 @@
 import React from "react";
-import "../../sass/layout/destination.scss";
-import { NavPlanet } from "../../ui/NavPlanet";
+import { NavPlanet } from "../../ui/components/NavPlanet";
+
+import "../../sass/pages/destination.scss";
+
 export const DestinationPage = () => {
   return (
     <section className="destination">

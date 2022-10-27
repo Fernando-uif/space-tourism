@@ -1,5 +1,5 @@
 import React from "react";
-import "../sass/layout/home.scss";
+import "../sass/pages/home.scss";
 
 export const HomeScreen = () => {
   return (
