@@ -1,7 +1,7 @@
 import React from "react";
 import { NavPlanet } from "../../ui/components/NavPlanet";
 
-import "../../sass/pages/destination.scss";
+import '../../sass/pages/destination/destination.scss';
 
 export const DestinationPage = () => {
   return (
