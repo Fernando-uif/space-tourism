@@ -1,10 +1,12 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-import { NavBar } from "../components/NavBar";
-import { CrewScreen } from "./CrewScreen";
-import { DestinationScreen } from "./DestinationScreen";
+import { CrewPage } from "../crew/pages/CrewPage";
+import { DestinationPage } from "../destination/pages/DestinationPage";
+import { MarsPage } from "../destination/pages/MarsPage";
+import { MoonPage } from "../destination/pages/MoonPage";
+import { TechnologyPage } from "../technology/page/TechnologyPage";
+import { NavBar } from "../ui/components/NavBar";
 import { HomeScreen } from "./HomeScreen";
-import { TechnologyScreen } from "./TechnologyScreen";
 
 export const AppRouter = () => {
   return (
@@ -12,9 +14,11 @@ export const AppRouter = () => {
       <NavBar />
       <Routes>
         <Route path={"/*"} element={<HomeScreen />} />
-        <Route path={"/destination"} element={<DestinationScreen />} />
-        <Route path={"/crew"} element={<CrewScreen />} />
-        <Route path={"/technology"} element={<TechnologyScreen />} />
+        <Route path={"crew"} element={<CrewPage />} />
+        <Route path={"destination"} element={<DestinationPage />}>
+          <Route path={"moon"} element={<MoonPage />} />
+        </Route>
+        <Route path={"technology"} element={<TechnologyPage />} />
       </Routes>
     </>
   );

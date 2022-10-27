@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import "../sass/layout/navbar.scss";
+import "../../sass/layout/navbar.scss";
+
 import { NavLink } from "react-router-dom";
 
 export const NavBar = () => {
@@ -15,7 +16,7 @@ export const NavBar = () => {
           <NavLink
             className={({ isActive }) =>
               "NavBar__item NavBar__item-1 " +
-              (isActive ? 'NavBar__selected' : "")
+              (isActive ? "NavBar__selected" : "")
             }
             to="/"
           >
