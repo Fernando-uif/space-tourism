@@ -10,9 +10,7 @@ export const DestinationPage = () => {
         <div className="destination__title">
           <span className="destination__number">01</span> pick your destination
         </div>
-        <div className="destination__destinations">
           <NavPlanet/>
-        </div>
       </div>
     </section>
   );

@@ -1,3 +1,14 @@
-.moon{
-    
+@import "../../../sass/abstract/variables.scss";
+.moon {
+    position: absolute;
+    display: flex;
+    width: 100vw;
+    justify-content: space-around;
+    top: 40%;
+  &__img {
+    width: 44.5rem;
+  }
+  &__text {
+    color: $white;
+  }
 }
