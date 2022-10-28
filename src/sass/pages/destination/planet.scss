@@ -1,6 +1,6 @@
 @import "../../../sass/abstract/variables.scss", '../../abstract/mixins.scss';
 
-.moon {
+.planet {
   position: absolute;
   display: flex;
   width: 100vw;
@@ -30,6 +30,7 @@
     line-height: 3.5rem;
     width: 40rem;
     margin-bottom: 5.4rem;
+    height: 15rem;
   }
 
   &__info {
