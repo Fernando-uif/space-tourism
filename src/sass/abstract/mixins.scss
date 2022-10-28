@@ -80,3 +80,14 @@
     bottom: $bottom;
     left: 0;
 }
+
+@mixin breakLine($left,$width) {
+    content: "";
+    position: absolute;
+    width: $width;
+    height: 0.2rem;
+    background-color: #fff;
+    opacity: 0.3;
+    left: $left;
+    @content;
+}

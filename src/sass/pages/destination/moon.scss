@@ -1,29 +1,63 @@
-@import "../../../sass/abstract/variables.scss";
+@import "../../../sass/abstract/variables.scss", '../../abstract/mixins.scss';
+
 .moon {
   position: absolute;
   display: flex;
   width: 100vw;
   justify-content: space-evenly;
   top: 40%;
+
   &__img {
     width: 44.5rem;
   }
+
   &__text {
     width: 50rem;
-    color:$white;
+    color: $white;
   }
+
   &__title {
     font-size: 10rem;
     font-family: $secondaryFont;
     text-transform: uppercase;
   }
+
   &__description {
     font-size: 1.8rem;
     font-family: $mainFont;
     text-transform: capitalize;
-    color:$letter-color;
+    color: $letter-color;
     line-height: 3.5rem;
     width: 40rem;
     margin-bottom: 5.4rem;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: flex-start;
+    gap: 5rem;
+    position: relative;
+
+    &-1 {
+      font-size: 1.4rem;
+      font-family: $mainFont;
+      color: $letter-color;
+      text-transform: uppercase;
+      letter-spacing: .4rem;
+      margin-bottom: 1rem;
+    }
+
+    &-2 {
+      font-size: 2.8rem;
+      font-family: $secondaryFont;
+      text-transform: uppercase;
+      letter-spacing: .2rem;
+    }
+
+    &::before {
+      @include breakLine(unset, 47.3rem) {
+        top: -3rem;
+      }
+    }
   }
 }
