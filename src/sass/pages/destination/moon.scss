@@ -1,14 +1,29 @@
 @import "../../../sass/abstract/variables.scss";
 .moon {
-    position: absolute;
-    display: flex;
-    width: 100vw;
-    justify-content: space-around;
-    top: 40%;
+  position: absolute;
+  display: flex;
+  width: 100vw;
+  justify-content: space-evenly;
+  top: 40%;
   &__img {
     width: 44.5rem;
   }
   &__text {
-    color: $white;
+    width: 50rem;
+    color:$white;
+  }
+  &__title {
+    font-size: 10rem;
+    font-family: $secondaryFont;
+    text-transform: uppercase;
+  }
+  &__description {
+    font-size: 1.8rem;
+    font-family: $mainFont;
+    text-transform: capitalize;
+    color:$letter-color;
+    line-height: 3.5rem;
+    width: 40rem;
+    margin-bottom: 5.4rem;
   }
 }
