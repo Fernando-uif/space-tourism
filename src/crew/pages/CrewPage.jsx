@@ -7,7 +7,7 @@ export const CrewPage = () => {
     <section className="crew">
       <div className="crew__img">
         <div className="crew__title">
-          <span className="crew__number">01</span> pick your destination
+          <span className="crew__number">02</span> Meet your crew
         </div>
         colocar el nav
       </div>

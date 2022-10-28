@@ -1,35 +1,47 @@
 import React from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, NavLink, Outlet } from "react-router-dom";
 import "../../sass/layout/navPlanet.scss";
 
 export const NavPlanet = () => {
   return (
     <>
       <div className="NavPlanet">
-        <Link
-          className="NavPlanet__item NavPlanet__item-3"
+        <NavLink
+          className={({ isActive }) =>
+            "NavPlanet__item NavPlanet__item-3 " +
+            (isActive ? "NavPlanet__selected" : "")
+          }
           to="/destination/moon"
         >
           Moon
-        </Link>
-        <Link
-          className="NavPlanet__item NavPlanet__item-2"
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            "NavPlanet__item NavPlanet__item-2 " +
+            (isActive ? "NavPlanet__selected" : "")
+          }
           to="/destination/mars"
         >
           Mars
-        </Link>
-        <Link
-          className="NavPlanet__item NavPlanet__item-1"
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            "NavPlanet__item NavPlanet__item-1 " +
+            (isActive ? "NavPlanet__selected" : "")
+          }
           to="/destination/europa"
         >
           Europa
-        </Link>
-        <Link
-          className="NavPlanet__item NavPlanet__item-4"
+        </NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            "NavPlanet__item NavPlanet__item-4 " +
+            (isActive ? "NavPlanet__selected" : "")
+          }
           to="/destination/titan"
         >
           Titan
-        </Link>
+        </NavLink>
       </div>
       <Outlet />
     </>
