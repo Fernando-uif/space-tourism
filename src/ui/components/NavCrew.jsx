@@ -4,20 +4,38 @@ export const NavCrew = () => {
   return (
     <>
       <div className="navCrew">
-        <NavLink className="navCrew__item navCrew__item-1" to="crew-one">
-          {" "}
-        </NavLink>
-        <NavLink className="navCrew__item navCrew__item-2" to="crew-two">
-          {" "}
-        </NavLink>
-        <NavLink className="navCrew__item navCrew__item-3" to="crew-three">
-          {" "}
-        </NavLink>
-        <NavLink className="navCrew__item navCrew__item-4" to="crew-four">
+        <NavLink
+          className={({ isActive }) =>
+            "navCrew__item navCrew__item-1 " +
+            (isActive ? "navCrew__selected" : "")
+          }
+          to="crew-one"
+        ></NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            "navCrew__item navCrew__item-2 " +
+            (isActive ? "navCrew__selected" : "")
+          }
+          to="crew-two"
+        ></NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            "navCrew__item navCrew__item-3 " +
+            (isActive ? "navCrew__selected" : "")
+          }
+          to="crew-three"
+        ></NavLink>
+        <NavLink
+          className={({ isActive }) =>
+            "navCrew__item navCrew__item-4 " +
+            (isActive ? "navCrew__selected" : "")
+          }
+          to="crew-four"
+        >
           {" "}
         </NavLink>
       </div>
-      <Outlet/>
+      <Outlet />
     </>
   );
 };

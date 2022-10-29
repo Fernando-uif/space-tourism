@@ -8,15 +8,15 @@
   width: 13.2rem;
   justify-content: space-evenly;
   &__item {
-    &-1 {
-      background-color: $white;
-      opacity: unset;
-    }
     border-radius: 50%;
     width: 1.5rem;
     height: 1.5rem;
     background-color: $whiteCircle;
     opacity: 0.17;
     display: flex;
+  }
+  &__selected{
+    background-color: $white;
+    opacity: unset;
   }
 }
