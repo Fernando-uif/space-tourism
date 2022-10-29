@@ -1,4 +1,3 @@
-import React from "react";
 import getImageUrl from "../../helpers/getImages";
 import "../../sass/pages/crew/crewInfo.scss";
 export const CrewOne = () => {
@@ -15,8 +14,8 @@ export const CrewOne = () => {
       </div>
         <img
           className="crewInfo__img"
-          src={getImageUrl("crew/image-douglas-hurley.png")}
-          alt={getImageUrl("crew/image-douglas-hurley.png")}
+          src={getImageUrl("crew/image-douglas-hurley.webp")}
+          alt={getImageUrl("crew/image-douglas-hurley.webp")}
         />
     </div>
   );
