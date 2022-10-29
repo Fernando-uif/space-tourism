@@ -1,6 +1,6 @@
-import React from 'react';
-import '../../sass/pages/crew/crew.scss';
-
+import React from "react";
+import "../../sass/pages/crew/crew.scss";
+import { NavCrew } from "../../ui/components/NavCrew";
 
 export const CrewPage = () => {
   return (
@@ -9,8 +9,8 @@ export const CrewPage = () => {
         <div className="crew__title">
           <span className="crew__number">02</span> Meet your crew
         </div>
-        colocar el nav
+        <NavCrew />
       </div>
     </section>
-  )
-}
+  );
+};
