@@ -2,16 +2,18 @@
 
 .technologyInfo {
   position: absolute;
-    display: flex;
-    top: 27rem;
-    left: 51rem;
-    gap: 5rem;
-    width: calc(100vw - 51rem);
+  display: flex;
+  top: 27rem;
+  left: 51rem;
+  gap: 5rem;
+  width: calc(100vw - 51rem);
 
-    justify-content: space-between;
+  justify-content: space-between;
+
   &__img {
-    width: 42rem;
+    width: 55rem;
   }
+
   &__title {
     font-family: $mainFont;
     font-style: normal;
@@ -22,14 +24,17 @@
     color: $letter-color;
     text-transform: uppercase;
   }
+
   &__technology {
     font-size: 5.6rem;
     color: $white;
     font-family: $secondaryFont;
   }
+
   &__description {
     color: $letter-color;
     font-size: 1.8rem;
     line-height: 3.2rem;
+    width: 40rem;
   }
 }

@@ -18,7 +18,7 @@ export const LaunchPage = () => {
       <img
       className="technologyInfo__img"
         src={getImageUrl("technology/image-launch-vehicle-portrait.jpg")}
-        alt=""
+        alt={getImageUrl("technology/image-launch-vehicle-portrait.jpg")}
       />
     </div>
   );
