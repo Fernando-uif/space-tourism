@@ -7,13 +7,13 @@ export const NavBar = () => {
   return (
     <>
       <nav className="NavBar">
-        <div className="NavBar__logo">
+        <NavLink className="NavBar__logo" to='/home'>
           <span className="NavBar__logo-circle"></span>
           <span className="NavBar__logo-circle2"></span>
-        </div>
+        </NavLink>
 
         <div className="NavBar__items">
-        <NavLink
+          <NavLink
             className={({ isActive }) =>
               "NavBar__item NavBar__item-1 " +
               (isActive ? " NavBar__selected" : "")

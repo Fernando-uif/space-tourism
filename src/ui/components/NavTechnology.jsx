@@ -6,15 +6,30 @@ export const NavTechnology = () => {
     <>
       <div className="NavTechnology">
         <NavLink
-          className="NavTechnology__circle NavTechnology__selected"
+          className={({ isActive }) =>
+            "NavTechnology__circle " +
+            (isActive ? "NavTechnology__selected" : "")
+          }
           to="launch"
         >
           <span className="NavTechnology__number">1</span>
         </NavLink>
-        <NavLink className="NavTechnology__circle" to="capsule">
+        <NavLink
+          className={({ isActive }) =>
+            "NavTechnology__circle " +
+            (isActive ? "NavTechnology__selected" : "")
+          }
+          to="capsule"
+        >
           <span className="NavTechnology__number">2</span>
         </NavLink>
-        <NavLink className="NavTechnology__circle" to="port">
+        <NavLink
+          className={({ isActive }) =>
+            "NavTechnology__circle " +
+            (isActive ? "NavTechnology__selected" : "")
+          }
+          to="port"
+        >
           <span className="NavTechnology__number">3</span>
         </NavLink>
       </div>
