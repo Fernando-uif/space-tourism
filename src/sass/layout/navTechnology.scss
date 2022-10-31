@@ -1,0 +1,35 @@
+@import "../abstract/variables.scss";
+
+.NavTechnology {
+  align-items: center;
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  left: 10rem;
+  position: absolute;
+  top: 10rem;
+  top: 31rem;
+  &__circle {
+    align-items: center;
+    border-radius: 50%;
+    border: 0.1rem solid $secondLogoColor;
+    color: $white;
+    cursor: pointer;
+    display: flex;
+    font-family: $secondaryFont;
+    font-size: 3.2rem;
+    height: 8rem;
+    justify-content: center;
+    text-decoration: none;
+    width: 8rem;
+  }
+  &__selected {
+    background-color: $white;
+    color: $circleLetter;
+  }
+  &__number {
+    opacity: unset;
+  }
+}

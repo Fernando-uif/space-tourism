@@ -10,12 +10,12 @@ import {
   MoonPage,
   TitanPage,
 } from "../destination/pages/index";
-import { 
-  CrewOne, 
-  CrewTwo, 
-  CrewThree, 
-  CrewFour 
-} from "../crew/pages/index";
+import { CrewOne, CrewTwo, CrewThree, CrewFour } from "../crew/pages/index";
+import {
+  LaunchPage,
+  SpaceCapsulePage,
+  SpaceportPage,
+} from "../technology/page/index";
 
 export const AppRouter = () => {
   return (
@@ -35,7 +35,11 @@ export const AppRouter = () => {
           <Route path={"titan"} element={<TitanPage />} />
           <Route path={"europa"} element={<EuropaPage />} />
         </Route>
-        <Route path={"technology"} element={<TechnologyPage />} />
+        <Route path={"technology"} element={<TechnologyPage />}>
+          <Route path={"launch"} element={<LaunchPage />} />
+          <Route path={"capsule"} element={<SpaceCapsulePage />} />
+          <Route path={"port"} element={<SpaceportPage />} />
+        </Route>
       </Routes>
     </>
   );
