@@ -5,14 +5,23 @@ import "../../sass/layout/navPlanet.scss";
 export const NavPlanet = ({ setLocation }) => {
   const changeHref = (e) => {
     // setLocation(window.location.href);
-    console.log(e.target.innerText,'Tenemos el nombre');
+    console.log(e.target.innerText, "Tenemos el nombre");
 
-    switch (e.target.innerText) {
-      case "Moon":
-        setLocation("http://127.0.0.1:5173/destination/");
+    switch (e.target.innerText.toLowerCase()) {
+      case "moon":
+        setLocation(window.location.origin + "/destination/");
         break;
-      case "Mars":
-        setLocation("http://127.0.0.1:5173/destination/mars");
+      case "mars":
+        setLocation(window.location.origin + "/destination/mars");
+        break;
+      case "europa":
+        setLocation(window.location.origin + "/destination/europa");
+        break;
+      case "titan":
+        setLocation(window.location.origin + "/destination/titan");
+        break;
+      default:
+        setLocation(window.location.origin + "/");
         break;
     }
   };
