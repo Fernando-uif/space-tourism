@@ -53,21 +53,15 @@
     width: 100%;
     height: 0.2rem;
     opacity: 0;
-    background-color: $white;
     bottom: $bottom;
     left: 0;
-    transition: opacity 0.2s ease-in;
+    transition: opacity 0.3s, background-color .3s ease-in;
 }
 
 @mixin underLineNavHover($bottom) {
     opacity: 1;
     content: "";
-    position: absolute;
-    width: 100%;
-    height: 0.2rem;
     background-color: $whiteCircle;
-    bottom: $bottom;
-    left: 0;
 }
 
 @mixin underLineSelected($bottom) {

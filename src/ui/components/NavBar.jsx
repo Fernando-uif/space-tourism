@@ -7,29 +7,31 @@ export const NavBar = () => {
   return (
     <>
       <nav className="NavBar">
-        <NavLink className="NavBar__logo" to='/home'>
+        <div to="/" className="NavBar__logo">
           <span className="NavBar__logo-circle"></span>
           <span className="NavBar__logo-circle2"></span>
-        </NavLink>
+        </div>
 
         <div className="NavBar__items">
           <NavLink
+            to="/"
+            exact={true}
             className={({ isActive }) =>
               "NavBar__item NavBar__item-1 " +
               (isActive ? " NavBar__selected" : "")
             }
-            to="/home"
+            end
           >
             <span>00</span>
             <span> Home</span>
           </NavLink>
 
           <NavLink
+            to="/destination"
             className={({ isActive }) =>
               "NavBar__item NavBar__item-2 " +
               (isActive ? " NavBar__selected" : "")
             }
-            to="/destination"
           >
             <span>01</span>
             <span> destination</span>

@@ -52,7 +52,6 @@
     font-size: 1.6rem;
     text-decoration: none;
     color: $white;
-
     &::after {
       @include underLineNav(-4rem);
     }

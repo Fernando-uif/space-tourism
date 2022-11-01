@@ -22,20 +22,20 @@ export const AppRouter = () => {
     <>
       <NavBar />
       <Routes>
-        <Route path={"/*"} element={<HomeScreen />} />
-        <Route path={"crew"} element={<CrewPage />}>
+        <Route path={"/"}  element={<HomeScreen />} />
+        <Route path={"/crew"} element={<CrewPage />}>
           <Route path={"crew-one"} element={<CrewOne />} />
           <Route path={"crew-two"} element={<CrewTwo />} />
           <Route path={"crew-three"} element={<CrewThree />} />
           <Route path={"crew-four"} element={<CrewFour />} />
         </Route>
-        <Route path={"destination"} element={<DestinationPage />}>
+        <Route path={"/destination"} element={<DestinationPage />}>
           <Route path={"moon"} element={<MoonPage />} />
           <Route path={"mars"} element={<MarsPage />} />
           <Route path={"titan"} element={<TitanPage />} />
           <Route path={"europa"} element={<EuropaPage />} />
         </Route>
-        <Route path={"technology"} element={<TechnologyPage />}>
+        <Route path={"/technology"} element={<TechnologyPage />}>
           <Route path={"launch"} element={<LaunchPage />} />
           <Route path={"capsule"} element={<SpaceCapsulePage />} />
           <Route path={"port"} element={<SpaceportPage />} />
