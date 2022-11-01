@@ -1,21 +1,25 @@
-import React from "react";
+import React,{ useState } from "react";
+
 import { NavPlanet } from "../../ui/components/NavPlanet";
-import { useNavigate, useParams} from 'react-router-dom';
-import '../../sass/pages/destination/destination.scss';
+import "../../sass/pages/destination/destination.scss";
 import { MoonPage } from "./MoonPage";
 
 export const DestinationPage = () => {
-  const params = useParams();
-  console.log(params,'Tenemos los params');
-  
+  const [location, setLocation] = useState( window.location.href );
+ console.log(location,'Tenemos la location');
+
   return (
     <section className="destination">
       <div className="destination__img">
         <div className="destination__title">
           <span className="destination__number">01</span> pick your destination
         </div>
-          <NavPlanet/>
-          <MoonPage/>
+        <NavPlanet setLocation={ setLocation } />
+        {
+          location === "http://127.0.0.1:5173/destination/" 
+            && 
+          (<MoonPage />)
+        }
       </div>
     </section>
   );

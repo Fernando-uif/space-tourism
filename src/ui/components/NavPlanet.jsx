@@ -1,17 +1,22 @@
 import React from "react";
-import {  NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet } from "react-router-dom";
 import "../../sass/layout/navPlanet.scss";
 
-export const NavPlanet = () => {
+export const NavPlanet = ({ setLocation }) => {
+  const changeTheHref = () => {
+    setLocation(window.location.href);
+  };
+
   return (
     <>
       <div className="NavPlanet">
         <NavLink
-          className={({ isActive = true}) =>
+          className={({ isActive = true }) =>
             "NavPlanet__item NavPlanet__item-3 " +
             (isActive ? "NavPlanet__selected" : "")
           }
           to="/destination/"
+          onClick={changeTheHref}
           end
         >
           Moon
@@ -22,6 +27,7 @@ export const NavPlanet = () => {
             (isActive ? "NavPlanet__selected" : "")
           }
           to="/destination/mars"
+          onClick={changeTheHref}
         >
           Mars
         </NavLink>
@@ -31,6 +37,7 @@ export const NavPlanet = () => {
             (isActive ? "NavPlanet__selected" : "")
           }
           to="/destination/europa"
+          onClick={changeTheHref}
         >
           Europa
         </NavLink>
@@ -40,6 +47,7 @@ export const NavPlanet = () => {
             (isActive ? "NavPlanet__selected" : "")
           }
           to="/destination/titan"
+          onClick={changeTheHref}
         >
           Titan
         </NavLink>
