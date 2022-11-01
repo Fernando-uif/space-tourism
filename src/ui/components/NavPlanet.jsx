@@ -3,8 +3,18 @@ import { NavLink, Outlet } from "react-router-dom";
 import "../../sass/layout/navPlanet.scss";
 
 export const NavPlanet = ({ setLocation }) => {
-  const changeTheHref = () => {
-    setLocation(window.location.href);
+  const changeHref = (e) => {
+    // setLocation(window.location.href);
+    console.log(e.target.innerText,'Tenemos el nombre');
+
+    switch (e.target.innerText) {
+      case "Moon":
+        setLocation("http://127.0.0.1:5173/destination/");
+        break;
+      case "Mars":
+        setLocation("http://127.0.0.1:5173/destination/mars");
+        break;
+    }
   };
 
   return (
@@ -15,8 +25,8 @@ export const NavPlanet = ({ setLocation }) => {
             "NavPlanet__item NavPlanet__item-3 " +
             (isActive ? "NavPlanet__selected" : "")
           }
+          onClick={(e) => changeHref(e)}
           to="/destination/"
-          onClick={changeTheHref}
           end
         >
           Moon
@@ -26,8 +36,8 @@ export const NavPlanet = ({ setLocation }) => {
             "NavPlanet__item NavPlanet__item-2 " +
             (isActive ? "NavPlanet__selected" : "")
           }
+          onClick={(e) => changeHref(e)}
           to="/destination/mars"
-          onClick={changeTheHref}
         >
           Mars
         </NavLink>
@@ -36,8 +46,8 @@ export const NavPlanet = ({ setLocation }) => {
             "NavPlanet__item NavPlanet__item-1 " +
             (isActive ? "NavPlanet__selected" : "")
           }
+          onClick={(e) => changeHref(e)}
           to="/destination/europa"
-          onClick={changeTheHref}
         >
           Europa
         </NavLink>
@@ -46,8 +56,8 @@ export const NavPlanet = ({ setLocation }) => {
             "NavPlanet__item NavPlanet__item-4 " +
             (isActive ? "NavPlanet__selected" : "")
           }
+          onClick={(e) => changeHref(e)}
           to="/destination/titan"
-          onClick={changeTheHref}
         >
           Titan
         </NavLink>

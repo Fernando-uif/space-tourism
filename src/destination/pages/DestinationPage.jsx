@@ -5,8 +5,8 @@ import "../../sass/pages/destination/destination.scss";
 import { MoonPage } from "./MoonPage";
 
 export const DestinationPage = () => {
-  const [location, setLocation] = useState( window.location.href );
- console.log(location,'Tenemos la location');
+  const [location, setLocation] = useState( 'http://127.0.0.1:5173/destination/' );
+  console.log(location,'Tenemos location');
 
   return (
     <section className="destination">

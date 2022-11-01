@@ -2,7 +2,6 @@ import getImageUrl from "../../helpers/getImages";
 import "../../sass/pages/destination/planet.scss";
 
 export const MoonPage = () => {
-  console.log(window.location.href,'Ruta de moon');
   return (
     <div className="planet">
       <img
