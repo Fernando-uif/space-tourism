@@ -7,11 +7,12 @@ export const NavPlanet = () => {
     <>
       <div className="NavPlanet">
         <NavLink
-          className={({ isActive }) =>
+          className={({ isActive = true}) =>
             "NavPlanet__item NavPlanet__item-3 " +
             (isActive ? "NavPlanet__selected" : "")
           }
-          to="/destination/moon"
+          to="/destination/"
+          end
         >
           Moon
         </NavLink>
