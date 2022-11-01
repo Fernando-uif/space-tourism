@@ -5,7 +5,7 @@ import "../../sass/pages/destination/destination.scss";
 import { MoonPage } from "./MoonPage";
 
 export const DestinationPage = () => {
-  const [location, setLocation] = useState( 'http://127.0.0.1:5173/destination/' );
+  const [location, setLocation] = useState( `${window.location.origin}/destination/` );
   console.log(location,'Tenemos location');
 
   return (
@@ -16,7 +16,7 @@ export const DestinationPage = () => {
         </div>
         <NavPlanet setLocation={ setLocation } />
         {
-          location === "http://127.0.0.1:5173/destination/" 
+          location === `${window.location.origin}/destination/` 
             && 
           (<MoonPage />)
         }

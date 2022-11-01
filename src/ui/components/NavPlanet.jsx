@@ -4,8 +4,6 @@ import "../../sass/layout/navPlanet.scss";
 
 export const NavPlanet = ({ setLocation }) => {
   const changeHref = (e) => {
-    // setLocation(window.location.href);
-    console.log(e.target.innerText, "Tenemos el nombre");
 
     switch (e.target.innerText.toLowerCase()) {
       case "moon":

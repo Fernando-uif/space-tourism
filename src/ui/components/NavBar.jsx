@@ -1,15 +1,9 @@
 import React from "react";
 import "../../sass/layout/navbar.scss";
 
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const NavBar = () => {
-  const navigate = useNavigate();
-  const handleMoon = () => {
-    navigate("/",{
-      replace:true
-    });
-  };
   return (
     <>
       <nav className="NavBar">
@@ -37,7 +31,6 @@ export const NavBar = () => {
               "NavBar__item NavBar__item-2 " +
               (isActive ? " NavBar__selected" : "")
             }
-            onClick={handleMoon}
           >
             <span>01</span>
             <span> destination</span>
