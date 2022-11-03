@@ -1,7 +1,24 @@
 import { NavLink, Outlet } from "react-router-dom";
 import "../../sass/layout/navTechnology.scss";
 
-export const NavTechnology = () => {
+export const NavTechnology = ({ setLocation }) => {
+  const changeHref = (e) => {
+    const number = e.target.innerText;
+    switch (number) {
+      case "1":
+        setLocation(`${window.location.origin}/technology/`);
+        break;
+      case "2":
+        setLocation(`${window.location.origin}/technology/capsule`);
+        break;
+      case "3":
+        setLocation(`${window.location.origin}/technology/port`);
+        break;
+      default:
+        setLocation(`${window.location.origin}/technology/`);
+        break;
+    }
+  };
   return (
     <>
       <div className="NavTechnology">
@@ -10,27 +27,31 @@ export const NavTechnology = () => {
             "NavTechnology__circle " +
             (isActive ? "NavTechnology__selected" : "")
           }
-          to="launch"
+          onClick={(e) => changeHref(e)}
+          to="/technology/"
+          end
         >
-          <span className="NavTechnology__number">1</span>
+          1
         </NavLink>
         <NavLink
           className={({ isActive }) =>
             "NavTechnology__circle " +
             (isActive ? "NavTechnology__selected" : "")
           }
-          to="capsule"
+          onClick={(e) => changeHref(e)}
+          to="/technology/capsule"
         >
-          <span className="NavTechnology__number">2</span>
+          2
         </NavLink>
         <NavLink
           className={({ isActive }) =>
             "NavTechnology__circle " +
             (isActive ? "NavTechnology__selected" : "")
           }
-          to="port"
+          onClick={(e) => changeHref(e)}
+          to="/technology/port"
         >
-          <span className="NavTechnology__number">3</span>
+          3
         </NavLink>
       </div>
       <Outlet />
