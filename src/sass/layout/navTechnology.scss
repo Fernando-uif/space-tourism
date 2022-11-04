@@ -12,7 +12,6 @@
   top: 10rem;
   top: 31rem;
   &__circle {
-    
     align-items: center;
     border-radius: 50%;
     border: 0.1rem solid $secondLogoColor;
@@ -25,17 +24,13 @@
     justify-content: center;
     text-decoration: none;
     width: 8rem;
-    transition:border .4s ease;
-    &:hover{
-      border: .1rem solid $white;
+    transition: border 0.4s ease;
+    &:hover {
+      border: 0.1rem solid $white;
     }
   }
   &__selected {
     background-color: $white;
     color: $circleLetter;
-  }
-  &__number {
-    opacity: unset;
-    user-select: none;
   }
 }
