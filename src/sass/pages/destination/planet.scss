@@ -1,4 +1,4 @@
-@import "../../../sass/abstract/variables.scss", '../../abstract/mixins.scss';
+@import "../../../sass/abstract/variables.scss", "../../abstract/mixins.scss";
 
 .planet {
   position: absolute;
@@ -6,9 +6,16 @@
   width: 100vw;
   justify-content: space-evenly;
   top: 40%;
-
+  @media screen and (max-width: $laptopL) {
+    gap: 2rem;
+  }
   &__img {
     width: 44.5rem;
+    @media screen and (max-width: $laptopL) {
+      width: 23.5rem;
+      height: 23.5rem;
+      align-self: center;
+    }
   }
 
   &__text {
@@ -20,6 +27,9 @@
     font-size: 10rem;
     font-family: $secondaryFont;
     text-transform: uppercase;
+    @media screen and (max-width: $laptopL) {
+      font-size: 8rem;
+    }
   }
 
   &__description {
@@ -44,7 +54,7 @@
       font-family: $mainFont;
       color: $letter-color;
       text-transform: uppercase;
-      letter-spacing: .4rem;
+      letter-spacing: 0.4rem;
       margin-bottom: 1rem;
     }
 
@@ -52,7 +62,7 @@
       font-size: 2.8rem;
       font-family: $secondaryFont;
       text-transform: uppercase;
-      letter-spacing: .2rem;
+      letter-spacing: 0.2rem;
     }
 
     &::before {

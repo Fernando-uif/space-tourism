@@ -1,8 +1,9 @@
 import React from "react";
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import "../../sass/layout/navPlanet.scss";
 
 export const NavPlanet = ({ setLocation }) => {
+  const navigate = useNavigate();
   const changeHref = (e) => {
 
     switch (e.target.innerText.toLowerCase()) {
@@ -23,7 +24,11 @@ export const NavPlanet = ({ setLocation }) => {
         break;
     }
   };
-
+  const otherPage = () => {
+  
+      navigate('/');
+  }
+  
   return (
     <>
       <div className="NavPlanet">
@@ -68,6 +73,7 @@ export const NavPlanet = ({ setLocation }) => {
         >
           Titan
         </NavLink>
+  
       </div>
       <Outlet />
     </>
