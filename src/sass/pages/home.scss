@@ -26,7 +26,7 @@
       top: 35%;
       width: 93%;
     }
-    @media screen and (max-width: $laptopLs) {
+    @media screen and (max-width: $laptopMs) {
       width: 96%;
     }
 
@@ -46,7 +46,7 @@
       text-transform: capitalize;
       font-size: 1.8rem;
       font-weight: 300;
-      @media screen and (max-width: $laptopLs) {
+      @media screen and (max-width: $laptopMs) {
         line-height: 3rem;
       }
     }
@@ -58,7 +58,7 @@
     font-weight: 300;
     font-family: $secondaryFont;
     text-transform: uppercase;
-    @media screen and (max-width: $laptopLs) {
+    @media screen and (max-width: $laptopMs) {
       font-size: 12rem;
     }
   }
@@ -89,7 +89,7 @@
         width: 32rem;
         height: 32rem;
       }
-      @media screen and (max-width: $laptopLs) {
+      @media screen and (max-width: $laptopMs) {
         width: 27rem;
         height: 27rem;
       }
@@ -109,7 +109,7 @@
       width: 20rem;
       font-size: 2.2rem;
     }
-    @media screen and (max-width: $laptopLs) {
+    @media screen and (max-width: $laptopMs) {
       height: 16rem;
       width: 16rem;
     }

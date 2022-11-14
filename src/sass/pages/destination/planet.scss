@@ -21,6 +21,9 @@
   &__text {
     width: 50rem;
     color: $white;
+    @media screen and (max-width: $laptopMs) {
+      width: 41.3rem;
+    }
   }
 
   &__title {
@@ -68,6 +71,9 @@
     &::before {
       @include breakLine(unset, 47.3rem) {
         top: -3rem;
+      }
+      @media screen and (max-width: $laptopMs) {
+        width: 41.3rem;
       }
     }
   }
