@@ -1,8 +1,6 @@
-import React from "react";
-import { useState } from "react";
 import "../../sass/pages/crew/crew.scss";
+
 import { NavCrew } from "../../ui/components/NavCrew";
-import { CrewOne } from "./CrewOne";
 
 export const CrewPage = () => {
   return (
