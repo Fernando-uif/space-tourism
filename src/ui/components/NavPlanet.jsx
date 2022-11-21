@@ -1,34 +1,14 @@
-import React from "react";
-import { NavLink, Outlet, useNavigate } from "react-router-dom";
+import { NavLink, Routes, Route, Navigate } from "react-router-dom";
+import {
+  EuropaPage,
+  MarsPage,
+  MoonPage,
+  TitanPage,
+} from "../../destination/pages";
+
 import "../../sass/layout/navPlanet.scss";
 
-export const NavPlanet = ({ setLocation }) => {
-  const navigate = useNavigate();
-  const changeHref = (e) => {
-
-    switch (e.target.innerText.toLowerCase()) {
-      case "moon":
-        setLocation(window.location.origin + "/destination/");
-        break;
-      case "mars":
-        setLocation(window.location.origin + "/destination/mars");
-        break;
-      case "europa":
-        setLocation(window.location.origin + "/destination/europa");
-        break;
-      case "titan":
-        setLocation(window.location.origin + "/destination/titan");
-        break;
-      default:
-        setLocation(window.location.origin + "/");
-        break;
-    }
-  };
-  const otherPage = () => {
-  
-      navigate('/');
-  }
-  
+export const NavPlanet = () => {
   return (
     <>
       <div className="NavPlanet">
@@ -37,9 +17,7 @@ export const NavPlanet = ({ setLocation }) => {
             "NavPlanet__item NavPlanet__item-3 " +
             (isActive ? "NavPlanet__selected" : "")
           }
-          onClick={(e) => changeHref(e)}
-          to="/destination/"
-          end
+          to="moon"
         >
           Moon
         </NavLink>
@@ -48,8 +26,7 @@ export const NavPlanet = ({ setLocation }) => {
             "NavPlanet__item NavPlanet__item-2 " +
             (isActive ? "NavPlanet__selected" : "")
           }
-          onClick={(e) => changeHref(e)}
-          to="/destination/mars"
+          to="mars"
         >
           Mars
         </NavLink>
@@ -58,8 +35,7 @@ export const NavPlanet = ({ setLocation }) => {
             "NavPlanet__item NavPlanet__item-1 " +
             (isActive ? "NavPlanet__selected" : "")
           }
-          onClick={(e) => changeHref(e)}
-          to="/destination/europa"
+          to="europa"
         >
           Europa
         </NavLink>
@@ -68,14 +44,18 @@ export const NavPlanet = ({ setLocation }) => {
             "NavPlanet__item NavPlanet__item-4 " +
             (isActive ? "NavPlanet__selected" : "")
           }
-          onClick={(e) => changeHref(e)}
-          to="/destination/titan"
+          to="titan"
         >
           Titan
         </NavLink>
-  
       </div>
-      <Outlet />
+      <Routes>
+        <Route path="europa" element={<EuropaPage />} />
+        <Route path="mars" element={<MarsPage />} />
+        <Route path="moon" element={<MoonPage />} />
+        <Route path="*" element={<Navigate replace to="moon" />} />
+        <Route path="titan" element={<TitanPage />} />
+      </Routes>
     </>
   );
 };

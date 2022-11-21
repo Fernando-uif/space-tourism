@@ -1,24 +1,10 @@
-import { NavLink, Outlet } from "react-router-dom";
+import { NavLink, Routes, Route, Navigate } from "react-router-dom";
 import "../../sass/layout/navTechnology.scss";
+import { LaunchPage } from "../../technology/page/LaunchPage";
+import { SpaceCapsulePage } from "../../technology/page/SpaceCapsulePage";
+import { SpaceportPage } from "../../technology/page/SpaceportPage";
 
-export const NavTechnology = ({ setLocation }) => {
-  const changeHref = (e) => {
-    const number = e.target.innerText;
-    switch (number) {
-      case "1":
-        setLocation(`${window.location.origin}/technology/`);
-        break;
-      case "2":
-        setLocation(`${window.location.origin}/technology/capsule`);
-        break;
-      case "3":
-        setLocation(`${window.location.origin}/technology/port`);
-        break;
-      default:
-        setLocation(`${window.location.origin}/technology/`);
-        break;
-    }
-  };
+export const NavTechnology = () => {
   return (
     <>
       <div className="NavTechnology">
@@ -27,9 +13,7 @@ export const NavTechnology = ({ setLocation }) => {
             "NavTechnology__circle " +
             (isActive ? "NavTechnology__selected" : "")
           }
-          onClick={(e) => changeHref(e)}
-          to="/technology/"
-          end
+          to="launch"
         >
           1
         </NavLink>
@@ -38,8 +22,7 @@ export const NavTechnology = ({ setLocation }) => {
             "NavTechnology__circle " +
             (isActive ? "NavTechnology__selected" : "")
           }
-          onClick={(e) => changeHref(e)}
-          to="/technology/capsule"
+          to="capsule"
         >
           2
         </NavLink>
@@ -48,13 +31,17 @@ export const NavTechnology = ({ setLocation }) => {
             "NavTechnology__circle " +
             (isActive ? "NavTechnology__selected" : "")
           }
-          onClick={(e) => changeHref(e)}
-          to="/technology/port"
+          to="port"
         >
           3
         </NavLink>
       </div>
-      <Outlet />
+      <Routes>
+        <Route path="launch" element={<LaunchPage />} />
+        <Route path="capsule" element={<SpaceCapsulePage />} />
+        <Route path="port" element={<SpaceportPage />} />
+        <Route path="*" element={<Navigate replace to="launch" />} />
+      </Routes>
     </>
   );
 };

@@ -1,28 +1,10 @@
-import { NavLink, Outlet } from "react-router-dom";
-import "../../sass/layout/navCrew.scss";
-export const NavCrew = ({ setLocation }) => {
-  const chageHref = (e) => {
-    const classElement = e.target.classList[1];
-    const number = classElement.split("-")[1];
-    switch (number) {
-      case "1":
-        setLocation(`${window.location.origin}/crew/`);
-        break;
-      case "2":
-        setLocation(`${window.location.origin}/crew/crew-two`);
-        break;
-      case "3":
-        setLocation(`${window.location.origin}/crew/crew-three`);
-        break;
-      case "4":
-        setLocation(`${window.location.origin}/crew/crew-four`);
-        break;
+import { NavLink, Routes, Route, Navigate } from "react-router-dom";
 
-      default:
-        setLocation(`${window.location.origin}/crew/`);
-        break;
-    }
-  };
+import { CrewOne, CrewTwo, CrewThree, CrewFour } from "../../crew/pages";
+
+import "../../sass/layout/navCrew.scss";
+
+export const NavCrew = () => {
   return (
     <>
       <div className="navCrew">
@@ -31,9 +13,7 @@ export const NavCrew = ({ setLocation }) => {
             "navCrew__item navCrew__item-1 " +
             (isActive ? "navCrew__selected" : "")
           }
-          to="/crew/"
-          onClick={(e) => chageHref(e)}
-          end
+          to="crew-one"
         ></NavLink>
         <NavLink
           className={({ isActive }) =>
@@ -41,7 +21,6 @@ export const NavCrew = ({ setLocation }) => {
             (isActive ? "navCrew__selected" : "")
           }
           to="crew-two"
-          onClick={(e) => chageHref(e)}
         ></NavLink>
         <NavLink
           className={({ isActive }) =>
@@ -49,7 +28,6 @@ export const NavCrew = ({ setLocation }) => {
             (isActive ? "navCrew__selected" : "")
           }
           to="crew-three"
-          onClick={(e) => chageHref(e)}
         ></NavLink>
         <NavLink
           className={({ isActive }) =>
@@ -57,10 +35,15 @@ export const NavCrew = ({ setLocation }) => {
             (isActive ? "navCrew__selected" : "")
           }
           to="crew-four"
-          onClick={(e) => chageHref(e)}
         ></NavLink>
       </div>
-      <Outlet />
+      <Routes>
+        <Route path="crew-one" element={<CrewOne />} />
+        <Route path="crew-two" element={<CrewTwo />} />
+        <Route path="crew-three" element={<CrewThree />} />
+        <Route path="crew-four" element={<CrewFour />} />
+        <Route path="*" element={<Navigate replace to="crew-one" />} />
+      </Routes>
     </>
   );
 };
