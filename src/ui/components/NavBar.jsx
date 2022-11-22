@@ -7,14 +7,14 @@ export const NavBar = () => {
   return (
     <>
       <nav className="NavBar">
-        <NavLink to="/home/" className="NavBar__logo">
+        <NavLink to="/" className="NavBar__logo">
           <span className="NavBar__logo-circle"></span>
           <span className="NavBar__logo-circle2"></span>
         </NavLink>
 
         <div className="NavBar__items">
           <NavLink
-            to="/home"
+            to="/"
             className={({ isActive }) =>
               "NavBar__item NavBar__item-1 " +
               (isActive ? " NavBar__selected" : "")
