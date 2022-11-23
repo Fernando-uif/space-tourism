@@ -1,34 +1,37 @@
-@import '../abstract/variables.scss', '../abstract/mixins.scss';
+@import "../abstract/variables.scss", "../abstract/mixins.scss";
 
 .NavPlanet {
-    position: absolute;
-    display: flex;
-    top: 35%;
-    right: 30%;
-    width: 28.5rem;
-    justify-content: space-evenly;
+  position: absolute;
+  display: flex;
+  top: 35%;
+  right: 30%;
+  width: 28.5rem;
+  justify-content: space-evenly;
+  z-index: 10;
+  @media screen and (max-width: $tabletL) {
+    top: 45rem;
+  }
+  &__item {
+    color: $white;
+    font-family: $mainFont;
+    text-decoration: none;
+    font-size: 1.8rem;
+    font-weight: 300;
+    cursor: pointer;
+    position: relative;
 
-    &__item {
-        color: $white;
-        font-family: $mainFont;
-        text-decoration: none;
-        font-size: 1.8rem;
-        font-weight: 300;
-        cursor: pointer;
-        position: relative;
-
-        &::after {
-            @include underLineNav(-1rem);
-        }
-
-        &:hover::after {
-            @include underLineNavHover(-1rem);
-        }
+    &::after {
+      @include underLineNav(-1rem);
     }
 
-    &__selected {
-        &::after {
-            @include underLineSelected(-1rem);
-        }
+    &:hover::after {
+      @include underLineNavHover(-1rem);
     }
+  }
+
+  &__selected {
+    &::after {
+      @include underLineSelected(-1rem);
+    }
+  }
 }

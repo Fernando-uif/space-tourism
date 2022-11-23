@@ -9,6 +9,13 @@
   @media screen and (max-width: $laptopL) {
     gap: 2rem;
   }
+  @media screen and (max-width: $tabletL) {
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    top: 20rem;
+    gap:5rem;
+  }
   &__img {
     width: 44.5rem;
     @media screen and (max-width: $laptopL) {
