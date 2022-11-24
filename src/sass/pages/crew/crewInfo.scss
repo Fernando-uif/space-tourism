@@ -4,6 +4,12 @@
   position: absolute;
   bottom: 23rem;
   left: 9rem;
+  @media screen and (max-width: $tabletL) {
+    bottom: 56rem;
+    display: flex;
+    left: 8rem;
+    flex-direction: column;
+  }
   &__position {
     color: $white;
     font-size: 3.2rem;
@@ -31,8 +37,13 @@
     left: calc(100vw / 2);
     width: calc(100vh / 2);
     @media screen and (max-width: $laptopL) {
-      width: calc(100vw/ 3);
-      left:55vw;
+      width: calc(100vw / 3);
+      left: 55vw;
+    }
+    @media screen and (max-width: $tabletL) {
+      width: 48vw;
+      left: 9vw;
+      bottom: -56rem;
     }
   }
 }

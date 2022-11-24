@@ -11,9 +11,15 @@
   @media screen and (max-width: $laptopLL) {
     left: 25rem;
   }
-
+   @media screen and (max-width:$tabletL) {
+      flex-direction:column-reverse;
+      
+  }
   &__img {
-    width: calc(100vh / 2);
+    background-image:url('../../../assets/technology/image-launch-vehicle-portrait.jpg');
+    width: 30rem;
+    background-size: cover;
+    background-position: center center;
   }
 
   &__title {

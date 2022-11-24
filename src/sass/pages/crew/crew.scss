@@ -6,6 +6,10 @@
     height: 100vh;
     background-size: cover;
     position: relative;
+    @media screen and (max-width: $tabletL) {
+      background-image: url("../../../assets/crew/background-crew-tablet.jpg");
+      height: 102.4rem;
+    }
   }
   &__title {
     color: $white;
@@ -19,6 +23,11 @@
     text-align: left;
     margin-left: 10rem;
     letter-spacing: .5rem;
+    @media screen and (max-width: $tabletL) {
+      margin-left: 5rem;
+      top: 13rem;
+      font-size:2rem;
+    }
   }
   &__number{
     color:$whiteCircle;

@@ -7,6 +7,10 @@
   left: 10rem;
   width: 13.2rem;
   justify-content: space-evenly;
+  @media screen and (max-width: $tabletL) {
+    bottom: 51rem;
+    left: 25rem;
+  }
   &__item {
     border-radius: 50%;
     width: 1.5rem;
@@ -14,8 +18,13 @@
     background-color: $whiteCircle;
     opacity: 0.17;
     display: flex;
+     @media screen and (max-width:$tabletL) {
+      width: 1rem;
+      height: 1rem;
+        
+    }
   }
-  &__selected{
+  &__selected {
     background-color: $white;
     opacity: unset;
   }

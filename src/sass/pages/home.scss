@@ -9,6 +9,7 @@
     position: relative;
     @media screen and (max-width: $tabletL) {
       background-image: url("../../assets/home/background-home-tablet.jpg");
+      height: 102.4rem;
     }
   }
 
@@ -37,8 +38,12 @@
       flex-direction: column;
       justify-content: center;
       text-align: center;
-      gap:4rem;
-      width:100%;
+      gap: 4rem;
+      width: 100%;
+      top: 22%;
+    }
+    @media screen and (max-width: $tabletL) {
+      gap: 10rem;
     }
     &-1 {
       color: $letter-color;

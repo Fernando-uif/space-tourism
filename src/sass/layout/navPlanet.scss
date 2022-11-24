@@ -9,7 +9,11 @@
   justify-content: space-evenly;
   z-index: 10;
   @media screen and (max-width: $tabletL) {
-    top: 45rem;
+    top: 50rem;
+    right:unset;
+    width:100%;
+    justify-content: center;
+    gap:2rem;
   }
   &__item {
     color: $white;

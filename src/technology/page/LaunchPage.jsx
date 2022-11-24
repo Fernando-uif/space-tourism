@@ -15,11 +15,14 @@ export const LaunchPage = () => {
           on the launch pad!
         </div>
       </div>
-      <img
+      <div className="technologyInfo__img">
+
+      </div>
+      {/* <img
       className="technologyInfo__img"
         src={getImageUrl("technology/image-launch-vehicle-portrait.jpg")}
         alt={getImageUrl("technology/image-launch-vehicle-portrait.jpg")}
-      />
+      /> */}
     </div>
   );
 };

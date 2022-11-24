@@ -8,6 +8,8 @@
     position: relative;
     @media screen and (max-width: $tabletL) {
       background-image: url("../../../assets/destination/background-destination-tablet.jpg");
+      height: 102.4rem;
+      
     }
   }
   &__title {
@@ -25,6 +27,7 @@
     @media screen and (max-width: $tabletL) {
       margin-left: 5rem;
       top: 13rem;
+      font-size:2rem;
     }
   }
   &__number {
