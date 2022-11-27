@@ -1,0 +1,112 @@
+@import "../abstract/variables.scss", "../abstract/mixins.scss";
+
+.navBarPhone {
+  display: flex;
+  padding: 2rem 0rem 2rem 2rem;
+  position: absolute;
+  z-index: 100;
+  align-items: center;
+  width: calc(100% - 2rem);
+  justify-content: space-between;
+
+  &__logo {
+    background-color: #333;
+    cursor: pointer;
+    width: 3.8rem;
+    height: 3.8rem;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+    border: none;
+
+    &-circle {
+      @include circleLogo;
+    }
+
+    &-circle2 {
+      @include circleLogo2;
+    }
+  }
+
+  &__line {
+    z-index: 20;
+    transition: background-color 0.3s ease;
+    background: $navBarColor;
+    content: "";
+    height: 0.3rem;
+    position: absolute;
+    right: 2rem;
+    width: 2.4rem;
+    &::after {
+      transition: transform 0.3s ease;
+      background: $navBarColor;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0.8rem;
+      transform: translateX(0rem) rotate(0deg);
+      transform-origin: left;
+      width: 100%;
+    }
+    &::before {
+      transition: transform 0.3s ease;
+      background: $navBarColor;
+      content: "";
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: -0.8rem;
+      transform: translateX(0rem) rotate(0deg);
+      transform-origin: left;
+      width: 100%;
+    }
+
+    &-active {
+      background-color: transparent;
+      transition: all 0.3s ease;
+      &::after {
+        transform: translateX(0.3rem) rotate(-45deg);
+      }
+      &::before {
+        transition: transform 0.3s ease;
+        transform: translateX(0.3rem) rotate(45deg);
+      }
+    }
+  }
+  &__items {
+    align-items: center;
+    backdrop-filter: blur(4rem);
+    background: rgba(255, 255, 255, 0.04);
+    display: flex;
+    flex-direction: column;
+    font-size: 1.6rem;
+    gap: 2.5rem;
+    height: 100vh;
+    padding-left: 4rem;
+    padding-top: 8.8rem;
+    position: fixed;
+    right: 0;
+    text-transform: uppercase;
+    top: 0;
+    width: 70vw;
+    &-element {
+      text-decoration: none;
+      color: $white;
+      width: 100%;
+      user-select: none;
+
+    }
+    &-number {
+      font-weight: bold;
+      padding-right: .7rem;
+    }
+    &-title {
+      font-weight: lighter;
+      letter-spacing: .2rem;
+    }
+    &-active{
+      opacity: .5;
+    }
+  }
+}

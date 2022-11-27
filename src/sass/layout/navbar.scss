@@ -47,12 +47,15 @@
     @media screen and (max-width: $laptopL) {
       width: 47rem;
     }
-
+    @media screen and (max-width: $tabletM) {
+      width: 35rem;
+    }
     &::after {
       @include breakLine(-40rem, 47.3rem);
       @media screen and (max-width: $laptopL) {
         width: 32rem;
         left: -29rem;
+        content:unset;
       }
       @media screen and (max-width: $laptopMs) {
         width: 24rem;
