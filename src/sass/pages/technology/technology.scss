@@ -6,11 +6,9 @@
     height: 100vh;
     background-size: cover;
     position: relative;
-    @media screen and (max-width: $tabletL) {
+    @media screen and (max-width: $laptopM) {
       background-image: url("../../../assets/technology/background-technology-tablet.jpg");
       height: 102.4rem;
-      
-
     }
   }
   &__title {
@@ -20,22 +18,22 @@
     font-family: $mainFont;
     text-transform: uppercase;
     position: absolute;
-    top:25%;
+    top: 25%;
     width: calc(100% - 10rem);
     text-align: left;
     margin-left: 10rem;
-    letter-spacing: .5rem;
-    @media screen and (max-width: $tabletL) {
+    letter-spacing: 0.5rem;
+     @media screen and (max-width:$laptopM) {
       top: 15%;
       margin-left: 4rem;
       font-size: 2rem;
+        
     }
   }
-  &__number{
-    color:$whiteCircle;
+  &__number {
+    color: $whiteCircle;
   }
-  &__destinations{
+  &__destinations {
     display: flex;
-    
   }
 }

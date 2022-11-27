@@ -31,6 +31,10 @@
     @media screen and (max-width: $laptopMs) {
       width: 41.3rem;
     }
+     @media screen and (max-width:$tabletS) {
+        width:unset;
+        
+    }
   }
 
   &__title {
@@ -58,7 +62,9 @@
     justify-content: flex-start;
     gap: 5rem;
     position: relative;
-
+ @media screen and (max-width:$tabletL) {
+    justify-content: space-evenly;
+}
     &-1 {
       font-size: 1.4rem;
       font-family: $mainFont;

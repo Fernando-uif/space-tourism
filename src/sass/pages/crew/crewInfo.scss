@@ -10,6 +10,10 @@
     left: 8rem;
     flex-direction: column;
   }
+  @media screen and (max-width: $tabletM) {
+    left: unset;
+    text-align: center;
+  }
   &__position {
     color: $white;
     font-size: 3.2rem;
@@ -23,6 +27,9 @@
     font-family: $secondaryFont;
     text-transform: uppercase;
     margin-top: 1rem;
+    @media screen and (max-width: $tabletM) {
+      font-size: 3.6rem;
+    }
   }
   &__description {
     color: $letter-color;
@@ -30,6 +37,10 @@
     line-height: 3.2rem;
     font-weight: 400;
     width: 44.4rem;
+    @media screen and (max-width: $tabletM) {
+      width: unset;
+      padding: 0 2rem;
+    }
   }
   &__img {
     position: absolute;
@@ -44,6 +55,11 @@
       width: 48vw;
       left: 9vw;
       bottom: -56rem;
+    }
+     @media screen and (max-width:$tabletM) {
+      width: 26rem;
+      left: 24vw;
+        
     }
   }
 }

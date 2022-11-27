@@ -11,15 +11,30 @@
   @media screen and (max-width: $laptopLL) {
     left: 25rem;
   }
-   @media screen and (max-width:$tabletL) {
-      flex-direction:column-reverse;
-      
+  @media screen and (max-width: $laptopL) {
+    gap: 1.5rem;
+    width: unset;
+  }
+  @media screen and (max-width: $laptopM) {
+    flex-direction: column-reverse;
+    gap: 20rem;
+    left: unset;
+    top: 21%;
+  }
+  &__container{
+     @media screen and (max-width:$laptopM) {
+        padding:0 4.5rem;
+    }
   }
   &__img {
-    background-image:url('../../../assets/technology/image-launch-vehicle-portrait.jpg');
     width: 30rem;
+    height: 30rem;
     background-size: cover;
     background-position: center center;
+    @media screen and (max-width: $laptopM) {
+      width: 100vw;
+      height: 31rem;
+    }
   }
 
   &__title {
@@ -32,12 +47,21 @@
     color: $letter-color;
     text-transform: uppercase;
     margin-bottom: 1rem;
+    @media screen and (max-width: $laptopM) {
+      text-align: center;
+    }
   }
 
   &__technology {
     font-size: 5.6rem;
     color: $white;
     font-family: $secondaryFont;
+    @media screen and (max-width: $laptopM) {
+      text-align: center;
+    }
+     @media screen and (max-width:$tabletM) {
+        font-size:3.6rem;
+    }
   }
 
   &__description {
@@ -45,5 +69,9 @@
     font-size: 1.8rem;
     line-height: 3.2rem;
     width: 40rem;
+    @media screen and (max-width: $laptopM) {
+      width: unset;
+      text-align: center;
+    }
   }
 }

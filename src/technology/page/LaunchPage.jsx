@@ -4,7 +4,7 @@ import "../../sass/pages/technology/technologyInfo.scss";
 export const LaunchPage = () => {
   return (
     <div className="technologyInfo">
-      <div>
+      <div className="technologyInfo__container">
         <div className="technologyInfo__title">THE TERMINOLOGY…</div>
         <div className="technologyInfo__technology">LAUNCH VEHICLE</div>
         <div className="technologyInfo__description">
@@ -15,14 +15,18 @@ export const LaunchPage = () => {
           on the launch pad!
         </div>
       </div>
-      <div className="technologyInfo__img">
+      <picture>
+        <source
+          media="(max-width:1024px)"
+          srcSet={getImageUrl("technology/image-launch-vehicle-landscape.jpg")}
+        />
 
-      </div>
-      {/* <img
-      className="technologyInfo__img"
-        src={getImageUrl("technology/image-launch-vehicle-portrait.jpg")}
-        alt={getImageUrl("technology/image-launch-vehicle-portrait.jpg")}
-      /> */}
+        <img
+          className="technologyInfo__img"
+          src={getImageUrl("technology/image-launch-vehicle-portrait.jpg")}
+          alt={getImageUrl("technology/image-launch-vehicle-portrait.jpg")}
+        />
+      </picture>
     </div>
   );
 };

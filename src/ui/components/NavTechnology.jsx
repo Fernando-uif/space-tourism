@@ -22,7 +22,7 @@ export const NavTechnology = () => {
             "NavTechnology__circle " +
             (isActive ? "NavTechnology__selected" : "")
           }
-          to="capsule"
+          to="port"
         >
           2
         </NavLink>
@@ -31,7 +31,7 @@ export const NavTechnology = () => {
             "NavTechnology__circle " +
             (isActive ? "NavTechnology__selected" : "")
           }
-          to="port"
+          to="capsule"
         >
           3
         </NavLink>

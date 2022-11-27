@@ -1,10 +1,10 @@
-import getImageUrl from '../../helpers/getImages';
-import '../../sass/pages/technology/technologyInfo.scss';
+import getImageUrl from "../../helpers/getImages";
+import "../../sass/pages/technology/technologyInfo.scss";
 
 export const SpaceportPage = () => {
   return (
     <div className="technologyInfo">
-      <div>
+      <div  className="technologyInfo__container">
         <div className="technologyInfo__title">THE TERMINOLOGY…</div>
         <div className="technologyInfo__technology">SPACEPORT</div>
         <div className="technologyInfo__description">
@@ -14,11 +14,19 @@ export const SpaceportPage = () => {
           situated to take advantage of the Earth’s rotation for launch.
         </div>
       </div>
-      <img
-        className="technologyInfo__img"
-        src={getImageUrl("technology/image-launch-vehicle-portrait.jpg")}
-        alt={getImageUrl("technology/image-launch-vehicle-portrait.jpg")}
-      />
+      <picture>
+        <source
+          media="(max-width:1024px)"
+          srcSet={getImageUrl("technology/image-spaceport-landscape.jpg")}
+        />
+
+        <img
+          className="technologyInfo__img"
+          src={getImageUrl("technology/image-spaceport-portrait.jpg")}
+          alt={getImageUrl("technology/image-spaceport-portrait.jpg")}
+        />
+      </picture>
+   
     </div>
   );
-}
+};

@@ -11,9 +11,14 @@
   position: absolute;
   top: 10rem;
   top: 31rem;
-  @media screen and (max-width:$tabletL) {
-    flex-direction:unset;
-}
+  @media screen and (max-width: $laptopM) {
+    flex-direction: unset;
+    left: unset;
+    width: 100%;
+    justify-content: center;
+    top: 58rem;
+    z-index:10;
+  }
   &__circle {
     align-items: center;
     border-radius: 50%;
@@ -31,7 +36,6 @@
     &:hover {
       border: 0.1rem solid $white;
     }
-     
   }
   &__selected {
     background-color: $white;

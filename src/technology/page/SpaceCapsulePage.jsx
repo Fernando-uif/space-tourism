@@ -4,7 +4,7 @@ import "../../sass/pages/technology/technologyInfo.scss";
 export const SpaceCapsulePage = () => {
   return (
     <div className="technologyInfo">
-      <div>
+      <div className="technologyInfo__container">
         <div className="technologyInfo__title">THE TERMINOLOGY…</div>
         <div className="technologyInfo__technology">SPACE CAPSULE</div>
         <div className="technologyInfo__description">
@@ -15,11 +15,18 @@ export const SpaceCapsulePage = () => {
           entertained.
         </div>
       </div>
-      <img
-        className="technologyInfo__img"
-        src={getImageUrl("technology/image-space-capsule-portrait.jpg")}
-        alt={getImageUrl("technology/image-space-capsule-portrait.jpg")}
-      />
+      <picture>
+        <source
+          media="(max-width:1024px)"
+          srcSet={getImageUrl("technology/image-space-capsule-landscape.jpg")}
+        />
+
+        <img
+          className="technologyInfo__img"
+          src={getImageUrl("technology/image-space-capsule-portrait.jpg")}
+          alt={getImageUrl("technology/image-space-capsule-portrait.jpg")}
+        />
+      </picture>
     </div>
   );
 };
