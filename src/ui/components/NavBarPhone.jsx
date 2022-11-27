@@ -1,7 +1,15 @@
-import React from "react";
+import React, { useRef } from "react";
 import { NavLink } from "react-router-dom";
 import "../../sass/layout/navBarPhone.scss";
 export const NavBarPhone = () => {
+  const menuButton = useRef();
+  const menu = useRef();
+
+  const handleOpenMenu = () => {
+    menuButton.current.classList.toggle("navBarPhone__line-active");
+    menu.current.classList.toggle("navBarPhone__items-menuActive");
+
+  };
   return (
     <>
       <nav className="navBarPhone">
@@ -9,8 +17,12 @@ export const NavBarPhone = () => {
           <span className="navBarPhone__logo-circle"></span>
           <span className="navBarPhone__logo-circle2"></span>
         </NavLink>
-        <div className="navBarPhone__line navBarPhone__line-active"></div>
-        <div className="navBarPhone__items">
+        <div
+          ref={menuButton}
+          className="navBarPhone__line navBarPhone__line"
+          onClick={handleOpenMenu}
+        ></div>
+        <div ref={menu} className="navBarPhone__items ">
           <NavLink
             to="/"
             className={({ isActive }) =>
