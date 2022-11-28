@@ -21,9 +21,13 @@
     left: unset;
     top: 21%;
   }
-  &__container{
-     @media screen and (max-width:$laptopM) {
-        padding:0 4.5rem;
+  @media screen and (max-width: $mobileL) {
+    top: 16%;
+    gap: 15rem;
+  }
+  &__container {
+    @media screen and (max-width: $laptopM) {
+      padding: 0 4.5rem;
     }
   }
   &__img {
@@ -59,8 +63,12 @@
     @media screen and (max-width: $laptopM) {
       text-align: center;
     }
-     @media screen and (max-width:$tabletM) {
-        font-size:3.6rem;
+    @media screen and (max-width: $tabletM) {
+      font-size: 3.6rem;
+    }
+    @media screen and (max-width: $mobileM) {
+      font-size: 2.6rem;
+      margin-bottom: 1rem;;
     }
   }
 

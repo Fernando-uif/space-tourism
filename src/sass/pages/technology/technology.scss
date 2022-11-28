@@ -29,6 +29,11 @@
       font-size: 2rem;
         
     }
+     @media screen and (max-width:$mobileL) {
+      top: 10%;
+      width: unset;
+        
+    }
   }
   &__number {
     color: $whiteCircle;

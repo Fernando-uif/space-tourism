@@ -10,6 +10,7 @@
       background-image: url("../../../assets/crew/background-crew-tablet.jpg");
       height: 102.4rem;
     }
+    
   }
   &__title {
     color: $white;
@@ -18,22 +19,24 @@
     font-family: $mainFont;
     text-transform: uppercase;
     position: absolute;
-    top:25%;
+    top: 25%;
     width: calc(100% - 10rem);
     text-align: left;
     margin-left: 10rem;
-    letter-spacing: .5rem;
+    letter-spacing: 0.5rem;
     @media screen and (max-width: $tabletL) {
       margin-left: 5rem;
       top: 15%;
-      font-size:2rem;
+      font-size: 2rem;
+    }
+    @media screen and (max-width: $mobileL) {
+      width: unset;
     }
   }
-  &__number{
-    color:$whiteCircle;
+  &__number {
+    color: $whiteCircle;
   }
-  &__destinations{
+  &__destinations {
     display: flex;
-    
   }
 }

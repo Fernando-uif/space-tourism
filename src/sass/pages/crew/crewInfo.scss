@@ -65,5 +65,8 @@
       left: 24vw;
         
     }
+    @media screen and (max-width:$mobileS) {
+      left: calc((100vw / 2) - 12rem );
+    }
   }
 }

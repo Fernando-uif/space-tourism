@@ -15,6 +15,9 @@
     justify-content: center;
     gap:2rem;
   }
+   @media screen and (max-width:$mobileL) {
+      top:42rem;
+  }
   &__item {
     color: $white;
     font-family: $mainFont;

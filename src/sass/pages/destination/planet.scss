@@ -14,7 +14,11 @@
     flex-direction: column;
     text-align: center;
     top: 20rem;
-    gap:13rem;
+    gap: 13rem;
+  }
+  @media screen and (max-width: $mobileL) {
+    top: 17rem;
+    gap: 8rem;
   }
   &__img {
     width: 44.5rem;
@@ -31,9 +35,8 @@
     @media screen and (max-width: $laptopMs) {
       width: 41.3rem;
     }
-     @media screen and (max-width:$tabletS) {
-        width:unset;
-        
+    @media screen and (max-width: $tabletS) {
+      width: unset;
     }
   }
 
@@ -43,6 +46,9 @@
     text-transform: uppercase;
     @media screen and (max-width: $laptopL) {
       font-size: 8rem;
+    }
+    @media screen and (max-width: $mobileL) {
+      font-size: 6rem;
     }
   }
 
@@ -55,6 +61,13 @@
     width: 40rem;
     margin-bottom: 5.4rem;
     height: 15rem;
+    @media screen and (max-width: $mobileL) {
+      width: unset;
+    }
+     @media screen and (max-width:$mobileM) {
+        padding:0 1rem;
+        height:18rem;
+    }
   }
 
   &__info {
@@ -62,9 +75,9 @@
     justify-content: flex-start;
     gap: 5rem;
     position: relative;
- @media screen and (max-width:$tabletL) {
-    justify-content: space-evenly;
-}
+    @media screen and (max-width: $tabletL) {
+      justify-content: space-evenly;
+    }
     &-1 {
       font-size: 1.4rem;
       font-family: $mainFont;
@@ -87,6 +100,9 @@
       }
       @media screen and (max-width: $laptopMs) {
         width: 41.3rem;
+      }
+      @media screen and (max-width: $mobileL) {
+        width: 100%;
       }
     }
   }

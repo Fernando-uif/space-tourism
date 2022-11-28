@@ -8,7 +8,6 @@ export const NavBarPhone = () => {
   const handleOpenMenu = () => {
     menuButton.current.classList.toggle("navBarPhone__line-active");
     menu.current.classList.toggle("navBarPhone__items-menuActive");
-
   };
   return (
     <>
